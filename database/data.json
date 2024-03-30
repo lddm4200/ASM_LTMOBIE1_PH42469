@@ -1,0 +1,148 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@gmail.com",
+      "pass": "123456",
+      "fullname": "Đào Duy Minh Long"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Cappuccino",
+      "title": "With Steamed Milk",
+      "price": "4.20",
+      "star": "4.5",
+      "img": "https://thuytinhocean.net/wp-content/uploads/2023/07/hinh-anh-ly-cafe-den-da_4.jpg",
+      "country": "Cappuccino",
+      "type": "water",
+      "favorite": false,
+      "description": "Chocolate Cake are larger and more rounded than the other bean varieties. These plants typically grow much larger than Arabica plants, measuring between 15 and 20 feet. Robusta beans are typically considered to be hardier because they can grow at lower altitudes and resist diseases. But recent research suggests that they don’t handle heat as well as was previously thought."
+    },
+    {
+      "id": "2",
+      "name": "Valencia",
+      "title": "With Foam",
+      "price": "4.50",
+      "star": "4.2",
+      "img": "https://thuytinhocean.net/wp-content/uploads/2023/07/hinh-anh-ly-cafe-den-da_7.jpg",
+      "country": "Espresso",
+      "type": "water",
+      "favorite": false,
+      "description": "Chocolate Cake are larger and more rounded than the other bean varieties. These plants typically grow much larger than Arabica plants, measuring between 15 and 20 feet. Robusta beans are typically considered to be hardier because they can grow at lower altitudes and resist diseases. But recent research suggests that they don’t handle heat as well as was previously thought."
+    },
+    {
+      "id": "3",
+      "name": "Panama",
+      "title": "With Steamed Milk",
+      "price": "4.10",
+      "star": "4.1",
+      "img": "https://thuytinhocean.net/wp-content/uploads/2023/07/hinh-anh-ly-cafe-den-da_17.jpg",
+      "country": "Americano",
+      "type": "bean",
+      "favorite": false,
+      "description": "Chocolate Cake are larger and more rounded than the other bean varieties. These plants typically grow much larger than Arabica plants, measuring between 15 and 20 feet. Robusta beans are typically considered to be hardier because they can grow at lower altitudes and resist diseases. But recent research suggests that they don’t handle heat as well as was previously thought."
+    },
+    {
+      "id": "4",
+      "name": "Panama",
+      "title": "With Steamed Milk",
+      "price": "4.10",
+      "star": "4.1",
+      "img": "https://thuytinhocean.net/wp-content/uploads/2023/07/hinh-anh-ly-cafe-den-da_12.jpg",
+      "country": "Americano",
+      "type": "water",
+      "favorite": false,
+      "description": "Chocolate Cake are larger and more rounded than the other bean varieties. These plants typically grow much larger than Arabica plants, measuring between 15 and 20 feet. Robusta beans are typically considered to be hardier because they can grow at lower altitudes and resist diseases. But recent research suggests that they don’t handle heat as well as was previously thought."
+    },
+    {
+      "id": "5",
+      "favorite": false
+    },
+    {
+      "id": "6",
+      "name": "Panama",
+      "title": "With Steamed Milk",
+      "price": "4.20",
+      "star": "4.0",
+      "img": "https://thuytinhocean.net/wp-content/uploads/2023/07/hinh-anh-ly-cafe-den-da_12.jpg",
+      "country": "Americano",
+      "type": "water",
+      "favorite": false,
+      "description": "Chocolate Cake are larger and more rounded than the other bean varieties. These plants typically grow much larger than Arabica plants, measuring between 15 and 20 feet. Robusta beans are typically considered to be hardier because they can grow at lower altitudes and resist diseases. But recent research suggests that they don’t handle heat as well as was previously thought."
+    },
+    {
+      "id": "7",
+      "name": "Cappuccino",
+      "title": "With Steamed Milk",
+      "price": "4.50",
+      "star": "4.1",
+      "img": "https://assets.bonappetit.com/photos/57c5d0e36a6acdf3485dfb2b/master/pass/3717295073_f5ae257d71_o.jpg",
+      "country": "Cappuccino",
+      "type": "water",
+      "favorite": false,
+      "description": "Chocolate Cake are larger and more rounded than the other bean varieties. These plants typically grow much larger than Arabica plants, measuring between 15 and 20 feet. Robusta beans are typically considered to be hardier because they can grow at lower altitudes and resist diseases. But recent research suggests that they don’t handle heat as well as was previously thought."
+    },
+    {
+      "id": "8",
+      "name": "Valencia",
+      "title": "With Foam",
+      "price": "5.10",
+      "star": "4.6",
+      "img": "https://thuytinhocean.net/wp-content/uploads/2023/07/hinh-anh-ly-cafe-den-da_7.jpg",
+      "country": "Espresso",
+      "type": "bean",
+      "favorite": false,
+      "description": "Chocolate Cake are larger and more rounded than the other bean varieties. These plants typically grow much larger than Arabica plants, measuring between 15 and 20 feet. Robusta beans are typically considered to be hardier because they can grow at lower altitudes and resist diseases. But recent research suggests that they don’t handle heat as well as was previously thought."
+    },
+    {
+      "id": "9",
+      "name": "Panama",
+      "title": "With Steamed Milk",
+      "price": "4.20",
+      "star": "4.0",
+      "img": "https://thuytinhocean.net/wp-content/uploads/2023/07/hinh-anh-ly-cafe-den-da_4.jpg",
+      "country": "Americano",
+      "type": "bean",
+      "favorite": false,
+      "description": "Chocolate Cake are larger and more rounded than the other bean varieties. These plants typically grow much larger than Arabica plants, measuring between 15 and 20 feet. Robusta beans are typically considered to be hardier because they can grow at lower altitudes and resist diseases. But recent research suggests that they don’t handle heat as well as was previously thought."
+    },
+    {
+      "id": "10",
+      "name": "Cappuccino",
+      "title": "With Steamed Milk",
+      "price": "4.50",
+      "star": "4.1",
+      "img": "https://thuytinhocean.net/wp-content/uploads/2023/07/hinh-anh-ly-cafe-den-da_12.jpg",
+      "country": "Cappuccino",
+      "type": "bean",
+      "favorite": false,
+      "description": "Chocolate Cake are larger and more rounded than the other bean varieties. These plants typically grow much larger than Arabica plants, measuring between 15 and 20 feet. Robusta beans are typically considered to be hardier because they can grow at lower altitudes and resist diseases. But recent research suggests that they don’t handle heat as well as was previously thought."
+    }
+  ],
+  "carts": [
+    {
+      "id": "02a3",
+      "productId": "1",
+      "quantity": "100"
+    }
+  ],
+  "orders": [],
+  "contacts": [
+    {
+      "id": "1710664530715.201",
+      "email": "long1@gmail.com",
+      "name": "long1234",
+      "phone": "0987654321",
+      "content": "11"
+    },
+    {
+      "id": "1710664567569.681",
+      "email": "long1@gmail.com",
+      "name": "long1234",
+      "phone": "0987654321",
+      "content": "1122"
+    }
+  ]
+}
