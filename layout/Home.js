@@ -1,7 +1,7 @@
 import { FlatList, Image, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 
-export const URL = 'http://192.168.37.67:3000';
+export const URL = 'http://192.168.67.67:3000';
 
 const Home = (props) => {
 

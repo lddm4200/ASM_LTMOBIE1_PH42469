@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { URL } from './Home';
 
 const Payment = ({ route, navigation }) => {
+    const {tongTien,cart} = route.params
 
     const [payments, setPayments] = useState([
         { title: 'Wallet', image: require('../image/wallet.png'), highlight: false, subTitle: '$ 100' },
@@ -10,6 +11,34 @@ const Payment = ({ route, navigation }) => {
         { title: 'Apple Pay', image: require('../image/applepay.png'), highlight: false },
         { title: 'Amazon Pay', image: require('../image/amazonpay.png'), highlight: false }])
 
+        const handThanhToan= async()=>{
+            for(const a of cart){
+                const dataThanhToan={
+                    country:a.country,
+                    description:a.description,
+                    favorite:a.favorite,
+                    img:a.img,
+                    name:a.name,
+                    price:a.price,
+                    star:a.star
+                }
+                try {
+                    const res = await fetch(URL + '/orders', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify(dataThanhToan)
+                    })
+                    if (res.ok) {
+                      console.log("Thêm thành công");
+                    } else {
+                      console.log("Thêm thất bại");
+                    }
+            
+                  } catch (err) {
+                    console.log(err);
+                  }
+            }
+        }
     return (
         <SafeAreaView style={styles.container}>
 
@@ -82,10 +111,11 @@ const Payment = ({ route, navigation }) => {
             <View style={{ flexDirection: 'row', position: 'absolute', top: 650, backgroundColor: 'black', width: '100%', height: 70 }}>
                 <View>
                     <Text style={{ color: 'white', marginLeft: 10, marginTop: 10, fontSize: 15 }}>Total Price</Text>
-                    <Text style={{ color: 'white', marginLeft: 10, fontSize: 25, fontWeight: 'bold' }}>$ </Text>
+                    <Text style={{ color: 'white', marginLeft: 10, fontSize: 25, fontWeight: 'bold' }}>{tongTien}$ </Text>
                 </View>
                 <TouchableOpacity onPress={async () => {
-                    ToastAndroid.show('Chức năng chưa hoàn thiện',0)
+                    ToastAndroid.show('Thanh toán thành công',0)
+                    handThanhToan()
                 }}
                     style={{ backgroundColor: "#D17842", width: '55%', justifyContent: 'center', alignItems: 'center', marginLeft: 80, margin: 10, borderRadius: 15 }}>
                     <Text style={{ color: 'white', textAlign: 'center', fontSize: 19, fontWeight: 'bold' }}>Pay from Credit Card</Text>

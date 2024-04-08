@@ -1,24 +1,44 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React, { useState } from 'react'
+import { FlatList, Image, StyleSheet, Text, View } from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { URL } from './Home';
 
 const Order = () => {
-
+const [data, setdata] = useState([])
   const [loading, setloading] = useState(true);
 
-  if (loading) {
-    return (
-        // Hiển thị một phần nào đó để người dùng biết dữ liệu đang được tải
-        <View style={styles.container}>
+ const getData=async()=>{
+ await fetch(URL+"/orders")
+  .then(res=>res.json())
+  .then(data=>{
+    setdata(data)
+  }).catch(err=>console.log(err))
+ }
 
-            <Text style={styles.textBase}>Loading...</Text>
+ useEffect(()=>{
+  getData()
+ },[])
 
-        </View>
-    );
-} 
-
+ const renderItem=({item})=>{
+  return(
+    <View style={{backgroundColor:'#141921',margin:10,borderRadius:20}}>
+      <Text style={{textAlign:'center',fontSize:18,color:'green',margin:5}}>Đã thanh toán</Text>
+    <View style={{flexDirection:'row',padding:20}}>
+      <Image style={{width:100,height:120,borderRadius:20,marginRight:20}} source={{uri:item.img}}/>
+      <View>
+      <Text style={{fontSize:19,color:'white',margin:5}}>name: {item.name}</Text>
+      <Text style={{fontSize:19,color:'white',margin:5}}>price: {item.price} $</Text>
+      <Text style={{fontSize:19,color:'white',margin:5}}>star: {item.star}{'  '}
+      <Image  style={{marginLeft:10,backgroundColor:'#FF9900'}} source={require('../image/Vectorstart.png')}/>
+      </Text></View>
+    </View></View>
+  )
+ }
   return (
-    <View>
-      <Text>Order</Text>
+    <View style={{backgroundColor:'#0C0F14',height:'100%'}}>
+      <FlatList
+      data={data}
+      renderItem={renderItem}
+      />
     </View>
   )
 }

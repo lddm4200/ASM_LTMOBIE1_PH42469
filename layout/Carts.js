@@ -9,6 +9,7 @@ const Carts = ({ navigation, route }) => {
     const refCart = useRef(null);
     const [loading, setloading] = useState(true);
 
+    
     const deleteCart = async (id) => {
         let url = `${URL}/carts/`+id
         await fetch(url, {
@@ -35,6 +36,7 @@ const Carts = ({ navigation, route }) => {
         }
         setloading(false)
         setCart(listCard);
+        
     }
 
     useEffect(() => {
@@ -61,8 +63,7 @@ const Carts = ({ navigation, route }) => {
         }, [])
     );
 
-
-
+    const tongTien = cart.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0);
     if (loading) {
         return (
             // Hiển thị một phần nào đó để người dùng biết dữ liệu đang được tải
@@ -110,7 +111,7 @@ const Carts = ({ navigation, route }) => {
                             }}
                             >
                                 100</Text>
-                            <Text style={{ color: 'white', marginTop: 15, marginHorizontal: 20, fontWeight: 'bold', fontSize: 20 }}> $ {(Number(item.price) * 1).toFixed(2)}</Text>
+                            <Text style={{ color: 'white', marginTop: 15, marginHorizontal: 20, fontWeight: 'bold', fontSize: 20 }}> $ {item.price}</Text>
                         </View>
 
                         <View style={styles.click1}>
@@ -152,9 +153,9 @@ const Carts = ({ navigation, route }) => {
             <View style={{ flexDirection: 'row', backgroundColor: 'black', width: '100%', height: 'auto', justifyContent: 'space-between', }}>
                 <View>
                     <Text style={{ color: 'white', marginLeft: 20, marginTop: 10, fontSize: 15 }}>Total Price</Text>
-                    <Text style={{ color: 'white', marginLeft: 20, fontSize: 25, fontWeight: 'bold' }}>$</Text>
+                    <Text style={{ color: 'white', marginLeft: 20, fontSize: 25, fontWeight: 'bold' }}>{tongTien}$</Text>
                 </View>
-                <TouchableOpacity onPress={() => navigation.navigate("Payment")}
+                <TouchableOpacity onPress={() => navigation.navigate("Payment",{tongTien: tongTien,cart:cart})}
                     style={{ backgroundColor: "orange", width: '50%', justifyContent: 'center', alignItems: 'center', marginLeft: 80, margin: 10, borderRadius: 15 }}>
                     <Text style={{ color: 'white', textAlign: 'center', fontSize: 20, fontWeight: 'bold' }}>Pay</Text>
                 </TouchableOpacity>
